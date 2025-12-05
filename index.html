@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wassim - Multi-Disciplinary Creative Designer</title>
+    <meta name="description" content="Wassim - Creative Designer from Belvédère, Casablanca specializing in Graphic Design, Video Editing, and Web Design">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e'
+                        },
+                        accent: {
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'bounce-in': 'bounceIn 0.8s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        bounceIn: {
+                            '0%': { transform: 'scale(0.3)', opacity: '0' },
+                            '50%': { transform: 'scale(1.05)' },
+                            '70%': { transform: 'scale(0.9)' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(14, 165, 233, 0.3)' },
+                            '100%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.6)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .stagger-animation > * {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        .stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+        .stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+        .stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+        .stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+        .stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-morphism">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gradient">Wassim</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary-600 transition-colors">Skills</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-primary-600 transition-colors">Portfolio</a>
+                    <a href="#experience" class="text-gray-700 hover:text-primary-600 transition-colors">Experience</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center gradient-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-20 h-20 bg-white rounded-full animate-float"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-white rounded-full animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-white rounded-full animate-float" style="animation-delay: 4s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center z-10">
+            <div class="animate-fade-in">
+                <div class="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <img src="https://picsum.photos/128?random=1" alt="Wassim Profile" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-slide-up">
+                    Wassim — <span class="text-gradient">Multi-Disciplinary Creative Designer</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 animate-slide-up" style="animation-delay: 0.2s;">
+                    Graphic Design (5+ years) · Video Editing (2+ years) · Web Design
+                </p>
+                <div class="flex justify-center space-x-4 animate-slide-up" style="animation-delay: 0.4s;">
+                    <button class="bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover-lift hover:bg-primary-50">
+                        View My Portfolio
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover-lift hover:bg-white hover:text-primary-600">
+                        Contact Me
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-12 text-gray-800">About Me</h2>
+                <div class="stagger-animation">
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        I'm Wassim, a creative designer from Belvédère, Casablanca. I have 5+ years experience in graphic design and 2+ years in advanced video editing. I specialize in vector and pixel design, branding, web design, and professional editing workflows.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">Illustrator</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">Photoshop</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">Figma</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">XD</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">After Effects</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">Premiere Pro</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">DaVinci Resolve (expert)</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">CapCut</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">UI/UX Design</span>
+                        <span class="bg-primary-50 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">Landing Page Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">My Skills</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Graphic Design Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift glass-morphism">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-palette text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Graphic Design</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Logo design & branding
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Visual identity systems
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Vector & pixel illustration
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Posters & social media graphics
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Video Editing Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift glass-morphism">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-video text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Video Editing</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            DaVinci Resolve expert
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            After Effects motion graphics
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Premiere Pro editing
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Social media & cinematic edits
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Web Design Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-lift glass-morphism">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-code text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-gray-800">Web Design</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Landing pages
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            UI/UX design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Responsive layout design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            Interactive animations
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">My Portfolio</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="flex justify-center mb-12 space-x-4">
+                <button class="px-6 py-2 rounded-full bg-primary-500 text-white font-medium">All</button>
+                <button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-primary-100">Graphic Design</button>
+                <button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-primary-100">Video Editing</button>
+                <button class="px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-medium hover:bg-primary-100">Web Design</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Items -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=2" alt="Branding Project" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-white text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <h4 class="text-xl font-bold mb-2">Branding Project</h4>
+                            <p class="text-sm">Logo & Visual Identity</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=3" alt="Motion Graphics" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-white text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <h4 class="text-xl font-bold mb-2">Motion Graphics</h4>
+                            <p class="text-sm">After Effects Animation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=4" alt="Web UI Design" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-white text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <h4 class="text-xl font-bold mb-2">Web UI Design</h4>
+                            <p class="text-sm">Landing Page</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=5" alt="Video Edit" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-white text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <h4 class="text-xl font-bold mb-2">Cinematic Edit</h4>
+                            <p class="text-sm">DaVinci Resolve</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=6" alt="Poster Design" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-white text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <h4 class="text-xl font-bold mb-2">Poster Design</h4>
+                            <p class="text-sm">Vector Illustration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover-lift cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=7" alt="UI/UX Design" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
+                        <div class="text-white text-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <h4 class="text-xl font-bold mb-2">UI/UX Design</h4>
+                            <p class="text-sm">Mobile App Interface</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">My Experience</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Timeline Item 1 -->
+                <div class="flex flex-col md:flex-row mb-12 items-center">
+                    <div class="md:w-1/2 md:pr-8 mb-6 md:mb-0 text-right">
+                        <h3 class="text-2xl font-bold text-gray-800">Graphic Designer</h3>
+                        <p class="text-primary-600 font-medium">5+ Years Experience</p>
+                        <p class="text-gray-600 mt-2">Specializing in branding, vector design, and visual identity systems for various clients and agencies.</p>
+                    </div>
+                    <div class="md:w-4 flex justify-center">
+                        <div class="w-4 h-4 bg-primary-500 rounded-full"></div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="text-gray-400">2018 - Present</div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="flex flex-col md:flex-row mb-12 items-center">
+                    <div class="md:w-1/2 md:pr-8 mb-6 md:mb-0 text-right">
+                        <div class="text-gray-400">2021 - Present</div>
+                    </div>
+                    <div class="md:w-4 flex justify-center">
+                        <div class="w-4 h-4 bg-primary-500 rounded-full"></div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800">Video Editor</h3>
+                        <p class="text-primary-600 font-medium">2+ Years Experience</p>
+                        <p class="text-gray-600 mt-2">Expert in DaVinci Resolve, After Effects, and Premiere Pro for cinematic and social media content.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-8 mb-6 md:mb-0 text-right">
+                        <h3 class="text-2xl font-bold text-gray-800">Web Designer</h3>
+                        <p class="text-primary-600 font-medium">Various Freelance Projects</p>
+                        <p class="text-gray-600 mt-2">Creating responsive landing pages, UI/UX designs, and interactive web experiences for diverse clients.</p>
+                    </div>
+                    <div class="md:w-4 flex justify-center">
+                        <div class="w-4 h-4 bg-primary-500 rounded-full"></div>
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="text-gray-400">Ongoing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Get In Touch</h2>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Message</label>
+                            <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500 transition-colors"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-500 text-white py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors hover-lift">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-4 p-4 rounded-lg bg-primary-50 hover-lift cursor-pointer">
+                        <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-envelope text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Email</h4>
+                            <p class="text-gray-600">hello@wassim.design</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 p-4 rounded-lg bg-primary-50 hover-lift cursor-pointer">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">WhatsApp</h4>
+                            <p class="text-gray-600">+212 6 XX XX XX XX</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 p-4 rounded-lg bg-primary-50 hover-lift cursor-pointer">
+                        <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center">
+                            <i class="fab fa-instagram text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Instagram</h4>
+                            <p class="text-gray-600">@wassim.design</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 text-white">
+                        <h4 class="font-bold text-lg mb-2">Based in Belvédère, Casablanca</h4>
+                        <p class="opacity-90">Available for local and international projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-2xl font-bold text-gradient mb-4">Wassim</div>
+            <p class="text-gray-400 mb-6">Multi-Disciplinary Creative Designer</p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-behance text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-dribbble text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2024 Wassim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements with animations
+        document.querySelectorAll('.animate-fade-in, .animate-slide-up, .stagger-animation > *').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Portfolio filter functionality
+        const filterButtons = document.querySelectorAll('#portfolio button');
+        const portfolioItems = document.querySelectorAll('#portfolio .group');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('bg-primary-500', 'text-white'));
+                filterButtons.forEach(btn => btn.classList.add('bg-gray-200', 'text-gray-700'));
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                button.classList.add('bg-primary-500', 'text-white');
+
+                // Filter logic would go here
+                // This is a simplified version - in a real implementation, 
+                // you would filter the portfolio items based on their category
+            });
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Form submission logic would go here
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
